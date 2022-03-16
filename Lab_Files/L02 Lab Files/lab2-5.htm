@@ -13,7 +13,11 @@
 
 // Concatenate a prompt() into an alert() statement
 
-alert("Good morning, " + "your name here" + ".");
+var userName = prompt("Please enter your name:");
+
+alert("Good morning, " + userName + ".");
+prompt("Please enter your name:");
+document.write("Good morning, " + userName) + ".";
 
 //-->
 </script>
