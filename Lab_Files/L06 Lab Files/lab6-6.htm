@@ -9,11 +9,11 @@
 function openWindow(){
 var info="";
 
-  info += "Welcome, " +               ;         //Add appCodeName here
+  info += "Welcome, " +               ;         navigator.appCodeName
   info += " user!\nYou are using the "; 
-  info +=      + " browser,\nversion ";        //Add appName here
-  info +=      + ".\nYour user agent ";       //Add appVersion here
-  info += "information is " +         ;          //Add userAgent here
+  info +=      + " browser,\nversion ";        navigator.appName
+  info +=      + ".\nYour user agent ";       navigator.appVersion
+  info += "information is " +         ;          navigator.userAgent
 
   alert(info);
 }
