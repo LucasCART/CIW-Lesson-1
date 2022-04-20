@@ -6,24 +6,22 @@
   <title>Lab 10-4</title>
 
   <script type="text/javascript">
-< !--
 
       function isSelected(form) {
         var len = form.mySelect.length;
         var theSelections = "Selected values:\n";
-
+// console.log(form.mySelect.options[1]);
         // Create for loop
-        for (var i = 0; i < len; i++) {
-          if (form.mySelect.options[i].selected)
-            theSelection += form.myselect.option[i].value + "\n";
-        }
-
+for(let i = 0; i < len; i++){
+  if(form.mySelect.options[i].selected){
+    theSelections += form.mySelect.options[i].innerHTML + "\n";
+  }
+}
 
 
         // Display selections
-        alert(theSelections)
+        alert(theSelections);
       }
-//-->
   </script>
 </head>
 

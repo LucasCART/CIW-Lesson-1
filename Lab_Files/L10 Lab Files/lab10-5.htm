@@ -11,6 +11,14 @@
         for(var i = 0; i < elem.length; i++)
           {
        //Insert for statement here//
+       if (elem[i].value.length < 1) {
+           alert("Enter something for the field: " + elem[i].name);
+           var mytext = document.getElementById(elem[i].name);
+           mytext.focus();
+           return false;
+       }
+    }
+
     str += "<strong>Type: </strong>" + elem[i].type + "&nbsp;&nbsp;";
     str += "<strong>Name: </strong>" + elem[i].name + "&nbsp;&nbsp;";
     str += "<strong>Value: </strong><em>" + elem[i].value + "</em>&nbsp;&nbsp;";
@@ -19,8 +27,7 @@
     if(elem[i].value.length < 1)
 	{
 	alert("Enter something for the field: " + elem[i].name);
-	return false;}
-        } 
+	return false}
         document.getElementById('lblValues').innerHTML = str;
      }
 </script>
