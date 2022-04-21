@@ -12,7 +12,7 @@
 
             document.writeln('<h3>CIW JavaScript Specialist</h3><hr />');
             
-            document.writeln('<table><tr><td><p>' +
+            document.writeln('<table style="width:470px;margin:auto"><tr><td><p class="narrow">' +
             'The table below shows the principal properties of your ' +
             'browser, the name by which it identifies itself, and ' +
             'the plug-ins supported. The final part of the table ' +
@@ -23,12 +23,12 @@
              '/td><' + '/tr><' + '/table>');
             document.writeln('<table cellpadding=2 cellspacing=1 border=0 ' +
             'style="width:470px;margin:auto"><tr>');
-            document.writeln('<th' +
-             '>Property<' + '/th>');
-            document.writeln('<th' +
-             '>Variable<' + '/th>');
-            document.writeln('<th' +
-             '>Value<' + '/th><' + '/tr>');
+            document.writeln('<th style="width:100px;text-align:left;background-color:#666699" class="small"' + 
+    				 '>Property<' + '/th>');
+            document.writeln('<th style="width:100px;text-align:left;background-color:#666699" class="small"' + 
+    				 '>Variable<' + '/th>');
+            document.writeln('<th style="width:100px;text-align:left;background-color:#666699" class="small"' + 
+    				 '>Value<' + '/th><' + '/tr>');
 
             // set up the variables we need to test the first few properties
 
@@ -47,21 +47,21 @@
             // Loop through the properties, outputting one table row for each one.
 
             for (var index=0;index < number_of_values_to_test;index++) {
-            document.write('<tr><td>' +
-             name_array[index] + '<' + '/td>');
-            document.write('<td>' + properties[index] +
+            document.write('<tr><td style="background-color:#9999cc;text-align:left" class="small">' + 
+        			   name_array[index] + '<' + '/td>');
+            document.write('<td style="background-color:#ccccff" class="small">' + properties[index] +
             '<' + '/td>');
-            document.write('<td>' +
+            document.write('<td style="background-color:#ccccff" class="small">' +
              navigator[properties[index]] + '<' + '/td>');
             document.writeln('<' + '/tr>');
             }
 
             // Write out details about the user's installed plug-ins
 
-            document.write('<tr><td>Plug-Ins<' +
-            '/TD>');
-            document.write('<td>plugins<' + '/td>');
-            document.writeln('<td>');
+            document.write('<tr><td style="background-color:#9999cc;text-align:left" class="small">Plug-Ins<' +
+    			   '/TD>');
+            document.write('<td style="background-color:#ccccff" class="small">plugins<' + '/td>');
+            document.writeln('<td style="background-color:#ccccff" class="small">');
             if (navigator.plugins != null) {
             for (var index=0;index < navigator.plugins.length; index++) {
             document.writeln(navigator.plugins[index].name + '<br />');
@@ -77,36 +77,36 @@
             // build a subtable within our main table, showing the types, their names
             // and extensions, and the plug-in assigned to them.
 
-            document.write('<tr><td>' +
-             'MIME Types<' + '/td>');
-            document.write('<td>mimeTypes<' + '/td>');
-            document.writeln('<td>');
+            document.write('<tr><td style="background-color:#9999cc;text-align:left" class="small">' + 
+    			   'MIME Types<' + '/td>');
+            document.write('<td style="background-color:#ccccff" class="small">mimeTypes<' + '/td>');
+    document.writeln('<td style="background-color:#ccccff" class="small">');
             if (navigator.mimeTypes != null) {
             document.writeln('<table>');
 
-            document.writeln('<tr>' +
-            '<th>' +
+            document.writeln('<tr style="background-color:#9999cc">' +
+            '<th class="small" style="text-align:left;background-color:#9999cc">' +
 
             'mime type<' + '/th>' +
-            '<th>' +
+            '<th class="small" style="background-color:#9999cc;text-align:left">' +
 
             'identifier<' + '/th>' +
-            '<th>' +
+            '<th class="small" style="background-color:#9999cc;text-align:left">' +
 
             'extn.<' + '/th>' +
-            '<th>' +
+            '<th class="small" style="background-color:#9999cc;text-align:left">' +
 
             'plug-in<' + '/th><' + '/tr>');
 
             for (var index=0;index < navigator.mimeTypes.length; index++) {
             if (navigator.mimeTypes[index].enabledPlugin != null) {
-            document.write('<tr><td>' +
+            document.write('<tr><td class="small" style="vertical-align:top">' +
              navigator.mimeTypes[index].type +
-            '<' + '/td><td>' +
+            '<' + '/td><td class="small" style="vertical-align:top">' +
              navigator.mimeTypes[index].description +
-            '<' + '/td><td>' +
+            '<' + '/td><td class="small" style="vertical-align:top">' +
              navigator.mimeTypes[index].suffixes +
-            '<' + '/td><td>' +
+            '<' + '/td><td class="small" style="vertical-align:top">' +
              navigator.mimeTypes[index].enabledPlugin.name +
             '<' + '/td><' + '/tr>');
             }
